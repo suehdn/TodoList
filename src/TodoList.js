@@ -2,11 +2,14 @@
 // params.initialState - 해당 컴포넌트의 초기 상태
 function TodoList({$target, initialState}){
     const $todoList = document.createElement('div');
-    
     $target.appendChild($todoList);
 
     this.state = initialState;
 
+    this.setState = nextState => {
+        this.state = nextState;
+        this.render();
+    }
     this.render = () => {
         // this.state = [{ text: '자바스크립트 공부하기'}, {text: '....'}]
         $todoList.innerHTML = `
