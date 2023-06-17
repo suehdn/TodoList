@@ -10,6 +10,9 @@ function App({$target, initialState}){
                 text
             }]
             todoList.setState(nextState)
+
+            storage.setItem('todos',JSON.stringify(nextState))
+            
         }
     })
 
