@@ -1,4 +1,4 @@
-function TodoForm({$target, onSubmit}){
+export default function TodoForm({$target, onSubmit}){
     const $form = document.createElement('form');
     let isInt = false;
 
@@ -22,7 +22,7 @@ function TodoForm({$target, onSubmit}){
                 }
             })
         }
-        isInit = true;
+        isInt = true;
     }
     this.render();
 }  
